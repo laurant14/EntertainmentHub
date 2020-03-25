@@ -1,4 +1,3 @@
-
 public class AccountIterator {
 	
 	private Account[] accounts;
