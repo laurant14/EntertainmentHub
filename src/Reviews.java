@@ -12,10 +12,14 @@ public class Reviews {
 		
 	}
 	
+	public int getStars() {
+		return this.stars;
+	}
 	
-	//getters and setters for stars
-	
-	//getters and setters for reviews
+	public void setStars(int stars) {
+		this.stars=stars;
+	}
+
 	
 	//getReview from UML is now this printReview 
 	public String printReview() {
