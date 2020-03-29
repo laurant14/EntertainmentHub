@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Account {
 	protected String username;
 	protected String password;
@@ -7,9 +9,10 @@ public class Account {
 	protected int pin;
 	protected double expDate;
 	
-	private Account[] account = new Account[1];
+	ArrayList accounts = new ArrayList();
 	int count;
 	double discount;
+
 
 	public Account(String name, String username, String password) {
 		this.name = name;
@@ -18,47 +21,28 @@ public class Account {
 	}
 
 	public void addAccount(String name, String username, String password) {
-		if(count >= account.length) {
-			account = growArray(account);
-		}
-		Account account01 = new Account(name, username, password);
-		account[count] = account01;
-		count++;
+		Account account1 = new Account(name, username, password);	
+		accounts.add(account1);
 	}
 	
-	public Account[] growArray(Account[] first) {
-		Account[] array = new Account[first.length + 5];
-		for(int i=0; i < first.length; i++) {
-			array[i] = first[i];
-		}
-		return array;
-	}
-
-	// not correct - ask prof!
 	public void deleteAccount(String username, String password) {
-		for(int i = 0; i < account.length; i++) {
-			if(username == this.username) {
-				if(password == this.password) {
-					
+		for(int i = 0; i < accounts.size(); i++) {
+			if(username.equals(this.username)) {
+				if (password.equals(this.password)) {
+					accounts.remove(i);
 				}
-			}
-		}
+			} 
+		} 
 	}
 
-	// not correct - ask prof!
 	public boolean loginAccount(String username, String password) {
-		for(int i = 0; i < account.length; i++) {
-			if(username == this.username) {
-				if(password == this.password) {
-					return true;
-				} else {
-					return false;
-				}
-			} else {
-				return false;
+		for(int i = 0; i < accounts.size(); i++) {
+			if(username.equals(this.username)) {
+				// get password
+				return password.equals(this.password);
+				} 
 			}
-		}
-		return true;
+		return false;
 	}
 
 	public void addPayment(String cardType, String name, int cardNum, int pin, double expDate) {
@@ -76,7 +60,10 @@ public class Account {
 		this.discount = percent;
 	}
 	
-	// not correct - ask prof and fix!
+	
+	// have an isDisabled boolean- to ask are u disabled? 
+	// need setters and getters, will help
+
 	public boolean isDisabled() {
 		boolean isTrue = true; 
 		if (isTrue == true) {
