@@ -17,10 +17,7 @@ public class Reviews {
 	
 	//getters and setters for reviews
 	
-	/**
-	 * getReview(){
-	 * should return string statement with account name, getStars, maybe add a comment/description
-	 */
+	//getReview from UML is now this printReview 
 	public String printReview() {
 		return "Username: " + account.username + "\nStars: " + this.stars + "\nComment: " +this.comment;
 	}
