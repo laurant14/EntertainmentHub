@@ -18,7 +18,7 @@ public class AccountIterator {
 	public Account next() {
 		Account next = accounts[position];
 		if(hasNext()) {
-			position = position + 1;
+			position = position++;
 			return next;
 		} else {
 			return null;

@@ -1,8 +1,12 @@
 
-public class RegularAccount implements Account{//either change to extends or make Account it an interface
+public class RegularAccount extends Account{//either change to extends or make Account it an interface
+	public RegularAccount(String name, String username, String password) {
+		super(name, username, password);
+		// TODO Auto-generated constructor stub
+	}
 	Account account;
 	AccountType accountType;
-	public double createDiscount() {
+	public void createDiscount() {
 		switch(accountType) {
 		case Student:
 			System.out.println("Students with a school ID receive a 10% discount!");
@@ -27,6 +31,7 @@ public class RegularAccount implements Account{//either change to extends or mak
 			account.setDiscount(0.15);
 			break;
 		}
+		return;
 		
 	}
 
