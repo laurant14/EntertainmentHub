@@ -16,10 +16,27 @@ public class Account {
 
 	public Account(String name, String username, String password) {
 		this.name = name;
-		this.username = username; 
+		this.username = username; s
 		this.password = password;
 	}
-
+	
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
 	public void addAccount(String name, String username, String password) {
 		Account account1 = new Account(name, username, password);	
 		accounts.add(account1);

@@ -8,8 +8,8 @@ public class DataWriter extends DataConstants {
 	
 	
 	public static void saveAccounts() {
-		Accounts accounts = Accounts.getInstance();
-		ArrayList<Account> friends = accounts.getAccounts();
+		accounts accounts = accounts.getInstance();
+		ArrayList<Account> friends = accounts.getAccount();
 		JSONArray jsonFriends = new JSONArray();
 		
 		//creating all the json objects

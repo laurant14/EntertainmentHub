@@ -10,7 +10,7 @@ public class DataLoader extends DataConstants{
 		ArrayList<Account> accounts = new ArrayList<Account>();
 		
 		try {
-			FileReader reader = new FileReader(PEOPLE_FILE_NAME);
+			FileReader reader = new FileReader(ACCOUNTS_FILE_NAME);
 			JSONParser parser = new JSONParser();
 			JSONArray accountsJSON = (JSONArray)new JSONParser().parse(reader);
 			

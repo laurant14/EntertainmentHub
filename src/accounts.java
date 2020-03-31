@@ -6,8 +6,22 @@ public class accounts {
 	private static ArrayList<Account> AccountList = new ArrayList<Account>();
 	
 	private accounts() {
-		AccountList = DataLoader.loadaccounts();
+		AccountList = DataLoader.loadAccounts();
+	}
+	public static accounts getInstance() {
+		if(accounts == null) {
+			accounts = new accounts();
+		}
+		
+		return accounts;
 	}
 	
+	public ArrayList<Account> getPeople() {
+		return AccountList;
+	}
 	
+	public void addPerson(String firstName, String lastName, String phoneNumber) {
+		AccountList.add(new Account(firstName, lastName, phoneNumber));
+		DataWriter.saveAccounts();
+	}
 }

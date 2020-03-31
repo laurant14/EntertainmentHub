@@ -3,7 +3,7 @@ public class Tickets extends Show {
 	protected String time; 
 	protected double price;
 	
-	public Ticket(Show show, String time, double price) {
+	public Tickets(Show show, String time, double price) {
 		this.show = show; 
 		this.time = time; 
 		this.price = price;
