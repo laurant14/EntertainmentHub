@@ -1,12 +1,16 @@
-public class Tickets extends Show {
+public class Tickets {
 	protected Show show;
 	protected String time; 
 	protected double price;
 	
-	public Ticket(Show show, String time, double price) {
+	public Tickets(Show show, String time, double price) {
 		this.show = show; 
 		this.time = time; 
 		this.price = price;
+	}
+
+	public Tickets() {
+		
 	}
 
 	public Show getShow() {
@@ -32,5 +36,9 @@ public class Tickets extends Show {
 	public void setPrice(double price) {
 		if (this.price >= 0.0)
 			this.price = price;
+	}
+	
+	public String printTicket() {
+		return "Show: " + this.show + "\n Time: " + this.time + "\n Price: " + this.price + "\n Enjoy your show!";
 	}
 }

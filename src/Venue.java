@@ -1,5 +1,5 @@
 
-public class Venue extends AccountIterator{
+public class Venue {
 	
 	private String venue;
 	private String title;
@@ -8,6 +8,8 @@ public class Venue extends AccountIterator{
 	private String name;
 	private String location;
 	private Theater[] theaters;
+	Reviews review = new Reviews();
+	Tickets ticket = new Tickets();
 	
 	//default
 	public Venue() {
@@ -54,18 +56,16 @@ public class Venue extends AccountIterator{
 		this.location=location;
 	}
 	
-	
-	
 	public String printVenue() {
 		return "Name: " +this.name + "\nLocation: " + this.location;
 	}
 	
-	public Reviews getReview(Venue venue) {
-		
+	public String getReview() {
+		return review.printReview();
 	}
 	
-	public Ticket getTicket() {
-		//TODO
+	public String getTicket() {
+		return ticket.printTicket();
 	}
 
 }

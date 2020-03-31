@@ -11,6 +11,10 @@ public class Reviews {
 		this.comment=comment;	
 	}
 	
+	public Reviews() {
+
+	}
+
 	public int getStars() {
 		return this.stars;
 	}

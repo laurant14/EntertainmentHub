@@ -6,7 +6,7 @@ public class accounts {
 	private static ArrayList<Account> AccountList = new ArrayList<Account>();
 	
 	private accounts() {
-		AccountList = DataLoader.loadaccounts();
+		AccountList = DataLoader.loadAccounts();
 	}
 	
 	
