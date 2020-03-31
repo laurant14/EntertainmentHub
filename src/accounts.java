@@ -16,7 +16,7 @@ public class accounts {
 		return accounts;
 	}
 	
-	public ArrayList<Account> getPeople() {
+	public ArrayList<Account> getAccount() {
 		return AccountList;
 	}
 	
