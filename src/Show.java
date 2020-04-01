@@ -1,9 +1,13 @@
 
-public class Show {
-	
+public class Show extends Reviews {
+
 	Venue venue;
 	private String showTime;
 	private int seats[];
+	
+	public Show(String username, int stars, String comment) {
+		super(username, stars, comment);
+	}
 	
 	public String getShowtime() {
 		return this.showTime;
@@ -21,7 +25,9 @@ public class Show {
 			}
 		}
 		return count;
+		
 	}
+	
 	
 	//set seats??? idk 
 	

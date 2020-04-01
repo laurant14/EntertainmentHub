@@ -9,7 +9,14 @@ public class Reviews {
 		this.comment=comment;	
 	}
 	
+<<<<<<< HEAD
 	
+=======
+	public Reviews() {
+
+	}
+
+>>>>>>> dab8509d96e7b5b635972d6003c1747e846cac48
 	public int getStars() {
 		return this.stars;
 	}

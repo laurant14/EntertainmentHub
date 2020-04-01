@@ -1,5 +1,5 @@
 
-public class Venue {
+public class Venue  {
 	
 	private String venue;
 	private String title;

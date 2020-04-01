@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+[{"name":"Apple","user":"apple12","password":"Applebees"}]
+=======
 [{"name":"Apple","username":"apple12","password":"Applebees"}]
+>>>>>>> branch 'master' of https://github.com/laurant14/EntertainmentHub.git
