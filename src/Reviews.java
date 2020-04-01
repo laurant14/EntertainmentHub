@@ -1,22 +1,17 @@
 public class Reviews {
 	Account account;
 	protected int stars;
-	protected String review;
 	protected String comment;
 	
-	public Reviews(String username, int stars, String comment, String review) {
+	public Reviews(String username, int stars, String comment) {
 		account.username=username;
 		this.stars=stars;
-		this.review = review;
 		this.comment=comment;	
 	}
 	
+	
 	public int getStars() {
 		return this.stars;
-	}
-	
-	public String getReview() {
-		return this.review;
 	}
 	
 	public String getComment() {
@@ -32,9 +27,6 @@ public class Reviews {
 			this.stars = stars;
 	}
 	
-	public void setReview(String review) {
-		this.review = review;
-	} 
 	
 	public void setComment(String comment) {
 		this.comment = comment;

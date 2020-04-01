@@ -16,7 +16,7 @@ public class Show {
 	public int getSeats() {
 		int count=0;
 		for(int i=0; i<seats.length;i++) {
-			if(seats[i]==null) {
+			if(seats[i]==0) {
 				count++;
 			}
 		}

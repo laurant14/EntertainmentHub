@@ -10,6 +10,7 @@ public class Theater extends Show{
 		for(int i=0;i<showList.size();i++) {
 			return showList.get(i);//why isn't it returning type show when the arrayList is of type show?
 		}
+		return getShows();//doesnt even make sense
 	}
 	
 	

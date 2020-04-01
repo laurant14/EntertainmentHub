@@ -4,8 +4,8 @@ public class RegularAccount extends Account{//either change to extends or make A
 	Account account;
 	AccountType accountType;
 	
-	public RegularAccount(String name, String username, String password) {
-		super(name, username, password);
+	public RegularAccount(String name, String username, String password, AccountType acctType) {
+		super(name, username, password, acctType);
 		// TODO Auto-generated constructor stub
 	}
 	public void createDiscount() {

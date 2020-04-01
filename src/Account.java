@@ -8,20 +8,26 @@ public class Account {
 	protected int cardNum;
 	protected int pin;
 	protected double expDate;
+	protected AccountType acctType;
 	
 	ArrayList accounts = new ArrayList();
 	int count;
 	double discount;
 
 
-	public Account(String name, String username, String password) {
+	public Account(String name, String username, String password, AccountType acctType) {
 		this.name = name;
 		this.username = username; 
 		this.password = password;
+		this.acctType=acctType;
+	}
+	
+	public Account() {
+		
 	}
 
-	public void addAccount(String name, String username, String password) {
-		Account account1 = new Account(name, username, password);	
+	public void addAccount(String name, String username, String password, AccountType acctType) {
+		Account account1 = new Account(name, username, password, acctType);	
 		accounts.add(account1);
 	}
 	

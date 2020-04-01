@@ -1,5 +1,5 @@
 
-public class Venue extends AccountIterator{
+public class Venue {
 	
 	private String venue;
 	private String title;
