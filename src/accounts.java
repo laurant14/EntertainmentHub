@@ -7,6 +7,7 @@ public class accounts {
 	
 	private accounts() {
 		AccountList = DataLoader.loadAccounts();
+
 	}
 	public static accounts getInstance() {
 		if(accounts == null) {
