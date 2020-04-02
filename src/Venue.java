@@ -60,12 +60,13 @@ public class Venue  {
 		return "Name: " +this.name + "\nLocation: " + this.location;
 	}
 	
-	public Reviews getReview(Venue venue) {
-		
-	}
-	
-	public Ticket getTicket() {
-		//TODO
-	}
+//	/*ask prof 
+//	public Reviews getReview(Venue venue) {
+//		return this.venue;
+//	 } */	
+//	
+//	public void Ticket getTicket() {	
+//		//TODO
+//	}
 
 }

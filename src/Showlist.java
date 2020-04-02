@@ -21,8 +21,9 @@ public class Showlist {
 		return ListOfShows;
 	}
 	
-	public void addShow(String firstName, String lastName, String phoneNumber) {
-		ListOfShows.add(new Account(firstName, lastName, phoneNumber));
+	//needs to look at this
+	public void addShow(String type, String name, String time1, String time2, String description,String ratings ) {
+		ListOfShows.add(new Show(type, name, time1, time2, description, ratings));
 		DataWriter.saveAccounts();
 	}
 }

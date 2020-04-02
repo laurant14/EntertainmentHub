@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class EntertainmentHubDriver {
 	Scanner key=new Scanner(System.in);
-
 	
 	public void runSim() {
 		Account account=new Account();
 		Event event;
+
 		//while loop to keep running
 		int answer=key.nextInt();
 		System.out.println("1) Login or 2) Continue as guest");
@@ -22,12 +22,12 @@ public class EntertainmentHubDriver {
 			break;
 		}
 		
-		System.out.println("What would you like to do?\n"
-				+ "1) Login"
-				+ "2) Create Account"
-				+ "3) Buy Ticket"
-				+ "4) Browse Shows"
-				+ "5) Write a Review");
+		System.out.println("What would you like to do?"
+				+ "\n1) Login"
+				+ "\n2) Create Account"
+				+ "\n3) Buy Ticket"
+				+ "\n4) Browse Shows"
+				+ "\n5) Write a Review");
 		int choice=key.nextInt();
 		switch(choice) {
 		case 1:
