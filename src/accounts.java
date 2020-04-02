@@ -9,7 +9,7 @@ public class accounts {
 		AccountList = DataLoader.loadAccounts();
 
 	}
-	public static accounts getInstance() {
+	public accounts getInstance() {
 		if(accounts == null) {
 			accounts = new accounts();
 		}

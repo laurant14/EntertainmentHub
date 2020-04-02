@@ -9,17 +9,17 @@ public class DataWriter extends DataConstants {
 	public static void saveAccounts() {
 		accounts accounts = accounts.getInstance();
 		ArrayList<Account> friends = accounts.getAccount();
-		JSONArray jsonFriends = new JSONArray();
+		JSONArray jsonFriendsACC = new JSONArray();
 
 		// creating the json objects
 		for (int i = 0; i < friends.size(); i++) {
-			jsonFriends.add(getAccountJSON(friends.get(i)));
+			jsonFriendsACC.add(getAccountJSON(friends.get(i)));
 		}
 
 		// Writing the JSON file
 		try (FileWriter file = new FileWriter(ACCOUNTS_FILE_NAME)) {
 
-			file.write(jsonFriends.toJSONString());
+			file.write(jsonFriendsACC.toJSONString());
 			file.flush();
 
 		} catch (IOException e) {
