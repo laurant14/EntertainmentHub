@@ -1,5 +1,5 @@
 
-public class Venue {
+public class Venue  {
 	
 	private String venue;
 	private String title;
@@ -8,8 +8,6 @@ public class Venue {
 	private String name;
 	private String location;
 	private Theater[] theaters;
-	Reviews review = new Reviews();
-	Tickets ticket = new Tickets();
 	
 	//default
 	public Venue() {
@@ -56,16 +54,18 @@ public class Venue {
 		this.location=location;
 	}
 	
+	
+	
 	public String printVenue() {
 		return "Name: " +this.name + "\nLocation: " + this.location;
 	}
 	
-	public String getReview() {
-		return review.printReview();
+	public Reviews getReview(Venue venue) {
+		
 	}
 	
-	public String getTicket() {
-		return ticket.printTicket();
+	public Ticket getTicket() {
+		//TODO
 	}
 
 }

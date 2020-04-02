@@ -5,8 +5,8 @@ public class Show extends Reviews {
 	private String showTime;
 	private int seats[];
 	
-	public Show(String username, int stars, String comment, String review) {
-		super(username, stars, comment, review);
+	public Show(String username, int stars, String comment) {
+		super(username, stars, comment);
 	}
 	
 	public String getShowtime() {
@@ -20,12 +20,14 @@ public class Show extends Reviews {
 	public int getSeats() {
 		int count=0;
 		for(int i=0; i<seats.length;i++) {
-			if(seats[i]== 0l) {
+			if(seats[i]==0) {
 				count++;
 			}
 		}
 		return count;
+		
 	}
+	
 	
 	//set seats??? idk 
 	

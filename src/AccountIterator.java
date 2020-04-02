@@ -1,4 +1,4 @@
-public class AccountIterator {
+public class AccountIterator extends Venue{
 	
 	private Account[] accounts;
 	private int position = 0;
