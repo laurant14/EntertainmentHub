@@ -1,53 +1,45 @@
+import java.util.ArrayList;
 
 public class Show {
 
 	Venue venue;
-	private String showType;
-	private String showName;
-	private String showTime1;
-	private String showTime2;
+	private String type;
+	private String name;
+	private String time1;
+	private String time2;
 	private String description;
 	private String ratings;
 	private int seats[];
-<<<<<<< HEAD
 	private Event event;
-	public Show(String username, int stars, String comment) {
-		super(username, stars, comment);
-=======
-	
-	//fix this error
-	public Show(String showType, String showName, String showTime1, String showTime2, String description,String ratings) {
-		super();
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
-	}
+	ArrayList<Show> shows = new ArrayList<Show>();
 	
 	public String getshowType() {
-		return this.showType;
+		return this.type;
 	}
-	public void setShowType(String showType) {
-		this.showType = showType;
-	}
-	
-	public String getshowName() {
-		return this.showName;
-	}
-	public void setShowName(String showName) {
-		this.showName = showName;
-	}
-	public String getShowtime1() {
-		return this.showTime1;
+	public void setType(String type) {
+		this.type = type;
 	}
 	
-	public void setShowTime1(String showTime1) {
-		this.showTime1 = showTime1;
+	public String getName() {
+		return this.name;
+	}
+	public void setShowName(String name) {
+		this.name = name;
+	}
+	public String gettime1() {
+		return this.time1;
 	}
 	
-	public String getShowtime2() {
-		return this.showTime2;
+	public void settime1(String time1) {
+		this.time1 = time1;
 	}
 	
-	public void setShowTime2(String showTime2) {
-		this.showTime2 = showTime2;
+	public String gettime2() {
+		return this.time2;
+	}
+	
+	public void settime2(String time2) {
+		this.time2 = time2;
 	}
 	
 	public String getDescription() {
@@ -65,6 +57,10 @@ public class Show {
 	public void setRatings(String ratings){
 		this.ratings = ratings;
 	}
+
+		public Show(String type, String name, String time1, String time2, String description,String ratings) {
+			super();
+		}
 	public int getSeats() {
 		int count = 0;
 		for(int i = 0; i < seats.length; i++) {
@@ -74,20 +70,14 @@ public class Show {
 		}
 		return count;
 	}
-<<<<<<< HEAD
 	
 	public Event getEvent() {
 		return this.event;
 	}
 	
-	
-	//set seats??? idk 
-	
-=======
 	public void setSeats(int seats[]) {
 		this.seats = seats;
 	}
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
 	public String getVenue() {
 		return "Venue: " +venue.printVenue();
 	}

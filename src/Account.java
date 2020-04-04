@@ -14,17 +14,6 @@ public class Account {
 	int count;
 	double discount;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
-	public Account(String name, String username, String password, AccountType acctType) {
-
-		this.name = name;
-		this.username = username;
-		this.password = password;
-	}
-
 	public String getUsername() {
 		return username;
 	}
@@ -50,14 +39,17 @@ public class Account {
 		this.acctType=acctType;
 	}
 	
-	public Account() {
-		
-	}
+
+	public Account(String name, String username, String password, AccountType acctType) {
+		this.name = name;
+		this.username = username;
+		this.password = password;
+		}
 
 	public void addAccount(String name, String username, String password, AccountType acctType) {
-		Account account1 = new Account(name, username, password, acctType);	
+		Account account = new Account(name, username, password, acctType);	
 
-		accounts.add(account1);
+		accounts.add(account);
 	}
 
 	public void deleteAccount(String username, String password) {

@@ -29,11 +29,44 @@ public class DataWriter extends DataConstants {
 
 	public static JSONObject getAccountJSON(Account account) {
 		JSONObject accountDetails = new JSONObject();
-		accountDetails.put(ACCOUNTS_NAME, Account.getName());
-		accountDetails.put(ACCOUNTS_USERNAME, Account.getUsername());
-		accountDetails.put(ACCOUNTS_PASSWORD, Account.getPassword());
-		accountDetails.put(ACCOUNTS_ACCTTYPE, Account.getPassword());
+		accountDetails.put(ACCOUNTS_NAME, account.getName());
+		accountDetails.put(ACCOUNTS_USERNAME, account.getUsername());
+		accountDetails.put(ACCOUNTS_PASSWORD, account.getPassword());
+		accountDetails.put(ACCOUNTS_ACCTTYPE, account.getPassword());
 
 		return accountDetails;
 	}
+	public static void saveShows() {
+		Showlist showlists = Showlist.getInstance();
+		ArrayList<Show> friends = showlists.getShowList();
+		JSONArray jsonFriendsACC = new JSONArray();
+
+		// creating the json objects
+		for (int i = 0; i < friends.size(); i++) {
+			jsonFriendsACC.add(getAccountJSON(friends.get(i)));
+		}
+
+		// Writing the JSON file
+		try (FileWriter file = new FileWriter(ACCOUNTS_FILE_NAME)) {
+
+			file.write(jsonFriendsACC.toJSONString());
+			file.flush();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static JSONObject getAccountJSON(Show show) {
+		JSONObject showDetails = new JSONObject();
+		showDetails.put(SHOWLIST_TYPE, show.getshowType());
+		showDetails.put(SHOWLIST_NAME, show.getName());
+		showDetails.put(SHOWLIST_TIME1, show.gettime1());
+		showDetails.put(SHOWLIST_TIME2, show.gettime2());
+		showDetails.put(SHOWLIST_DESCRIPTION, show.getDescription());
+		showDetails.put(SHOWLIST_RATINGS, show.getRating());
+		
+		return showDetails;
+	}
+	
 }
