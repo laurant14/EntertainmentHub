@@ -13,7 +13,6 @@ public class accounts {
 		if(accounts == null) {
 			accounts = new accounts();
 		}
-		
 		return accounts;
 	}
 	
@@ -21,8 +20,8 @@ public class accounts {
 		return AccountList;
 	}
 	
-	public void addPerson(String firstName, String lastName, String phoneNumber) {
-		AccountList.add(new Account(firstName, lastName, phoneNumber));
+	public void addPerson(String name, String username, String password, AccountType acctType) {
+		AccountList.add(new Account(name, username, password, acctType));
 		DataWriter.saveAccounts();
 	}
 }

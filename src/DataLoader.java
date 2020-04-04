@@ -23,6 +23,7 @@ public class DataLoader extends DataConstants{
 				String name = (String)accountJSON.get(ACCOUNTS_NAME);
 				String username = (String)accountJSON.get(ACCOUNTS_USERNAME);
 				String password = (String)accountJSON.get(ACCOUNTS_PASSWORD);
+				String acctType = (String)accountJSON.get(ACCOUNTS_ACCTTYPE);
 				//for shows
 				JSONObject showsJSON = (JSONObject)showslistJSON.get(i);
 				String showType = (String)showslistJSON.get(SHOWLIST_TYPE);
@@ -30,11 +31,11 @@ public class DataLoader extends DataConstants{
 				String time1 = (String)showslistJSON.get(SHOWLIST_TIME1);
 				String time2 = (String)showslistJSON.get(SHOWLIST_TIME2);
 				String description = (String)showslistJSON.get(SHOWLIST_DESCRIPTION);
-				
+				String rating = (String)showslistJSON.get(SHOWLIST_RATINGS);
 				//add to both lists
-				accounts.add(new Account(name, username, password));
+				accounts.add(new Account(name, username, password, acctType));
 				//needs to be checked
-				showslist.add(new Show(showType,showName,time1,time2,description));
+				showslist.add(new Show(showType,showName,time1,time2,description, rating));
 			}
 			
 			return accounts;
