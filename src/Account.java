@@ -9,7 +9,16 @@ public class Account {
 	protected int pin;
 	protected double expDate;
 	protected AccountType acctType;
-	
+
+	public Account(String name, String username, String password,AccountType acctType) {
+		this.name = name;
+		this.username = username;
+		this.password = password;
+	}
+	public Account() {
+		
+	}
+
 	ArrayList<Account> accounts = new ArrayList<Account>();
 	int count;
 	double discount;
@@ -36,15 +45,15 @@ public class Account {
 
 	public void setPassword(String password) {
 		this.password = password;
-		this.acctType=acctType;
 	}
 	
-
-	public Account(String name, String username, String password,AccountType acctType) {
-		this.name = name;
-		this.username = username;
-		this.password = password;
-		}
+	public AccountType getAccountType() {
+		return this.acctType;
+	}
+	
+	public void setAccountType(AccountType acctType) {
+		this.acctType=acctType;
+	}
 
 	public void addAccount(String name, String username, String password, AccountType acctType) {
 		Account account = new Account(name, username, password, acctType);	

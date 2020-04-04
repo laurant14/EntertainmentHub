@@ -40,14 +40,14 @@ public class DataLoader extends DataConstants{
 
 		try {
 			FileReader reader = new FileReader(SHOWSLIST_FILE_NAME);
-			//JSONParser parser = new JSONParser();
+			JSONParser parser = new JSONParser();
 			JSONArray showslistJSON = (JSONArray)new JSONParser().parse(reader);
 
 			for(int i=0; i <showslistJSON.size(); i++) {
 
 				//for shows
 				JSONObject showsJSON = (JSONObject)showslistJSON.get(i);
-				ShowType showType = (ShowType)showsJSON.get(SHOWLIST_TYPE);
+				String showType = (String)showsJSON.get(SHOWLIST_TYPE);
 				String showName = (String)showsJSON.get(SHOWLIST_NAME);
 				String time1 = (String)showsJSON.get(SHOWLIST_TIME1);
 				String time2 = (String)showsJSON.get(SHOWLIST_TIME2);

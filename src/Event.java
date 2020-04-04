@@ -1,9 +1,23 @@
 
-public class Event {
+public class Event extends Show {
 	
+	public Event(String type, String name, String time1, String time2, String description, String ratings) {
+		super(type, name, time1, time2, description, ratings);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
 	protected String name;
 	protected String description;
 	protected Reviews reviews;
+	protected String type;
+	protected String time;
+	
+	
+	public String getTime() {
+		return this.time;
+	}
 	
 	public String getName() {
 		return this.name;

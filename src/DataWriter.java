@@ -43,7 +43,7 @@ public class DataWriter extends DataConstants {
 
 		// creating the json objects
 		for (int i = 0; i < friends.size(); i++) {
-			jsonFriendsACC.add(getAccountJSON(friends.get(i)));
+			jsonFriendsACC.add(getShowsJSON(friends.get(i)));
 		}
 
 		// Writing the JSON file
@@ -57,7 +57,7 @@ public class DataWriter extends DataConstants {
 		}
 	}
 
-	public static JSONObject getAccountJSON(Show show) {
+	public static JSONObject getShowsJSON(Show show) {
 		JSONObject showDetails = new JSONObject();
 		showDetails.put(SHOWLIST_TYPE, show.getshowType());
 		showDetails.put(SHOWLIST_NAME, show.getName());
@@ -68,5 +68,19 @@ public class DataWriter extends DataConstants {
 		
 		return showDetails;
 	}
+	
+	public static JSONObject removeShowsJSON(Show show) {
+		JSONObject showDetails1 = new JSONObject();
+		showDetails1.remove(SHOWLIST_TYPE, show.getshowType());
+		showDetails1.remove(SHOWLIST_NAME, show.getName());
+		showDetails1.remove(SHOWLIST_TIME1, show.gettime1());
+		showDetails1.remove(SHOWLIST_TIME2, show.gettime2());
+		showDetails1.remove(SHOWLIST_DESCRIPTION, show.getDescription());
+		showDetails1.remove(SHOWLIST_RATINGS, show.getRating());
+		
+		return showDetails1;
+	}
+	
+	
 	
 }

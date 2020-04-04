@@ -11,14 +11,18 @@ public class Show {
 	private String ratings;
 	private int seats[];
 	private Event event;
-	private ShowType type;
+	private String type;
+	
+	public Show(String type, String name, String time1, String time2, String description,String ratings) {
+		super();
+	}
 	
 	ArrayList<Show> shows = new ArrayList<Show>();
 	
-	public ShowType getshowType() {
+	public String getshowType() {
 		return this.type;
 	}
-	public void setType(ShowType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	
@@ -60,9 +64,11 @@ public class Show {
 		this.ratings = ratings;
 	}
 
-		public Show(ShowType type, String name, String time1, String time2, String description,String ratings) {
-			super();
-		}
+	
+	
+	public Show(String username, int stars, String comment) {
+		// TODO Auto-generated constructor stub
+	}
 	public int getSeats() {
 		int count = 0;
 		for(int i = 0; i < seats.length; i++) {

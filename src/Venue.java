@@ -10,10 +10,6 @@ public class Venue  {
 	private String location;
 	private Theater[] theaters;
 	
-	//default
-	public Venue() {
-		this.venue=venue;
-	}
 	
 	public String getTitle() {
 		return this.title;
