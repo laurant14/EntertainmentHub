@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Show {
 
@@ -9,12 +10,15 @@ public class Show {
 	private String time2;
 	private String description;
 	private String ratings;
-	private int seats[];
+	private char seats[][]=new char[12][12];
 	private Event event;
 	private String type;
 	
 	public Show(String type, String name, String time1, String time2, String description,String ratings) {
 		super();
+	}
+	public Show() {
+		
 	}
 	
 	ArrayList<Show> shows = new ArrayList<Show>();
@@ -69,11 +73,50 @@ public class Show {
 	public Show(String username, int stars, String comment) {
 		// TODO Auto-generated constructor stub
 	}
+	public void initSeats() {
+		Random r=new Random();
+		for(int i = 0; i < seats.length; i++) {
+			for(int j=0;j < seats[i].length;j++) {
+				seats[i][j]='X';
+			}
+		}
+		for(int i = 0; i < 10; i++) {
+			for(int j=0;j<seats[i].length;j++) {
+				seats[r.nextInt(10)][r.nextInt(10)]='-';
+			}
+		}
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<1;j++) {
+				seats[i][j]='H';
+			}
+		}
+		for(int i=0;i<5;i++) {
+			for(int j=9;j<10;j++) {
+				seats[i][j]='H';
+			}
+		}
+		
+		for(int i = 0; i < seats.length; i++) {
+			for(int j=0;j<seats[i].length;j++) {
+				System.out.print(seats[i][j]);
+			}
+			System.out.println();
+		}
+	}
+	
+	public void printChart() {
+		for(int i = 0; i < seats.length; i++) {
+			for(int j=0;j<seats[i].length;j++) {
+				System.out.print(seats[i][j]);
+			}
+			System.out.println();
+		}
+	}
 	public int getSeats() {
 		int count = 0;
 		for(int i = 0; i < seats.length; i++) {
-			if(seats[i]== 0) {
-				count++;
+			for(int j=0;j<seats.length;j++) {
+				System.out.print(seats[i][j]);
 			}
 		}
 		return count;
@@ -83,7 +126,7 @@ public class Show {
 		return this.event;
 	}
 	
-	public void setSeats(int seats[]) {
+	public void setSeats(char seats[][]) {
 		this.seats = seats;
 	}
 	public String getVenue() {

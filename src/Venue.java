@@ -9,6 +9,8 @@ public class Venue  {
 	private String name;
 	private String location;
 	private Theater[] theaters;
+	private Reviews review;
+	private Tickets ticket;
 	
 	
 	public String getTitle() {
@@ -66,12 +68,12 @@ public class Venue  {
 		return "Name: " +this.name + "\nLocation: " + this.location;
 	}
 	
-	public Reviews getReview(Venue venue) {
-		
+	public Reviews getReview() {
+		return this.review;
 	}
 	
 	public Tickets getTicket() {
-		//TODO
+		return this.ticket;
 	}
 //	/*ask prof 
 //	public Reviews getReview(Venue venue) {

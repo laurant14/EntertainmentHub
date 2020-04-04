@@ -72,9 +72,10 @@ public class Account {
 	}
 
 	public boolean loginAccount(String username, String password) {
+		this.username=username;
 		for (int i = 0; i < accounts.size(); i++) {
 			if (username.equals(this.username)) {
-				// get password
+				System.out.println("Login was successful!");
 				return password.equals(this.password);
 			}
 		}

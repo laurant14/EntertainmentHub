@@ -1,4 +1,4 @@
 
 public enum AccountType {
-	Student, Adult, Teacher, Senior, Guest, Veteran;
+	Guest, Student, Adult, Teacher, Senior, Veteran;
 }

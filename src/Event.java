@@ -5,7 +5,9 @@ public class Event extends Show {
 		super(type, name, time1, time2, description, ratings);
 		// TODO Auto-generated constructor stub
 	}
-	
+	public Event() {
+		
+	}
 	
 
 	protected String name;
