@@ -8,11 +8,6 @@ public class Reviews {
 		this.stars=stars;
 		this.comment=comment;	
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
-
 	public Reviews() {
 
 	}

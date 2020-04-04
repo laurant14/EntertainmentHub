@@ -5,7 +5,6 @@ public class Event {
 	protected String description;
 	protected Reviews reviews;
 	
-	
 	public String getName() {
 		return this.name;
 	}

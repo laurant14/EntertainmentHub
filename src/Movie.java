@@ -1,6 +1,11 @@
 
 public class Movie extends Event{
 	
-	//printMethod
+	Event event;
+	ShowType movie;
+	
+	public Movie() {
+		
+	}
 
 }

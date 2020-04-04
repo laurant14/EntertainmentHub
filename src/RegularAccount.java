@@ -1,18 +1,4 @@
 
-<<<<<<< HEAD
-public class RegularAccount extends Account{
-
-
-	Account account;
-	AccountType accountType;
-
-	
-	public RegularAccount(String name, String username, String password, AccountType acctType) {
-		super(name, username, password, acctType);
-		// TODO Auto-generated constructor stub
-	}
-
-=======
 public class RegularAccount extends Account{//either change to extends or make Account it an interface
 
 	public RegularAccount(String name, String username, String password,AccountType acctType) {
@@ -23,7 +9,6 @@ public class RegularAccount extends Account{//either change to extends or make A
 	Account account;
 	AccountType accountType;
 
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
 	public void createDiscount() {
 		switch(accountType) {
 		case Student:

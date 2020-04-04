@@ -13,8 +13,8 @@ public class EntertainmentHubDriver {
 			//while loop to keep running
 			int answer=key.nextInt(); 
 			System.out.println("1) Login or 2) Continue as guest");
-			int answer=key.nextInt();
-			switch(answer) {
+			int answer1=key.nextInt();
+			switch(answer1) {
 			case 1:
 				System.out.println("Enter your username: ");
 				String username=key.nextLine();
@@ -165,8 +165,8 @@ public class EntertainmentHubDriver {
 							+ "\n3) Buy Ticket"
 							+ "\n4) Browse Shows"
 							+ "\n5) Write a Review");
-					int choice=key.nextInt();
-					switch(choice) {
+					int choice1=key.nextInt();
+					switch(choice1) {
 					case 1:
 						System.out.println("Enter your username: ");
 						String username=key.nextLine();
@@ -182,7 +182,8 @@ public class EntertainmentHubDriver {
 						System.out.println("Enter a password: ");
 						String passWord=key.nextLine();
 						System.out.println("Enter an account type: Student, Adult, Teacher, Senior, Guest, or Veteran");
-						AccountType acctType=key.nextAccountType();//figure this out
+						String accType=key.next();
+						AccountType acctType = accType;//figure this out
 						account.addAccount(name, userName, passWord, acctType);
 					case 3:
 						System.out.println("Do you want to buy tickets for a 1) play, 2) movie, or 3) concert?");

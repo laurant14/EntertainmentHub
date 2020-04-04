@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Show {
 
 	Venue venue;
-	private String type;
+	//private String type;
 	private String name;
 	private String time1;
 	private String time2;
@@ -11,12 +11,14 @@ public class Show {
 	private String ratings;
 	private int seats[];
 	private Event event;
+	private ShowType type;
+	
 	ArrayList<Show> shows = new ArrayList<Show>();
 	
-	public String getshowType() {
+	public ShowType getshowType() {
 		return this.type;
 	}
-	public void setType(String type) {
+	public void setType(ShowType type) {
 		this.type = type;
 	}
 	
@@ -58,7 +60,7 @@ public class Show {
 		this.ratings = ratings;
 	}
 
-		public Show(String type, String name, String time1, String time2, String description,String ratings) {
+		public Show(ShowType type, String name, String time1, String time2, String description,String ratings) {
 			super();
 		}
 	public int getSeats() {
@@ -80,6 +82,12 @@ public class Show {
 	}
 	public String getVenue() {
 		return "Venue: " +venue.printVenue();
+	}
+	
+	//to add show from admin account
+	public static void add(Show show) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

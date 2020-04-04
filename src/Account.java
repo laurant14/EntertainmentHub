@@ -40,7 +40,7 @@ public class Account {
 	}
 	
 
-	public Account(String name, String username, String password, AccountType acctType) {
+	public Account(String name, String username, String password,AccountType acctType) {
 		this.name = name;
 		this.username = username;
 		this.password = password;

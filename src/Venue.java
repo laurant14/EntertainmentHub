@@ -70,7 +70,6 @@ public class Venue  {
 		return "Name: " +this.name + "\nLocation: " + this.location;
 	}
 	
-<<<<<<< HEAD
 	public Reviews getReview(Venue venue) {
 		
 	}
@@ -78,7 +77,6 @@ public class Venue  {
 	public Tickets getTicket() {
 		//TODO
 	}
-=======
 //	/*ask prof 
 //	public Reviews getReview(Venue venue) {
 //		return this.venue;
@@ -87,6 +85,5 @@ public class Venue  {
 //	public void Ticket getTicket() {	
 //		//TODO
 //	}
->>>>>>> 7fc234a1c2192554a1739d78f71deddc6ce6dd3f
-
+ 
 }
