@@ -111,13 +111,13 @@ public class DriverHelper {
 	
 
 	public void writeReview() {
-		Event event=new Event(null, null, null, null, null, null);//fix later
+		Event event=new Event();//fix later
 		System.out.println("Which show would you like to review?");
-		String rev=key.nextLine();
+		String rev=key.next();
 		//figure out how to link show to review
 		event.setName(rev);
 		System.out.println("Enter Username: ");
-		String userName1=key.nextLine();
+		String userName1=key.next();
 		System.out.println("Enter stars from 1-5: ");
 		int stars=key.nextInt();
 		System.out.println("Enter comment: ");

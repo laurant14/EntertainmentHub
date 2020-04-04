@@ -21,11 +21,9 @@ public class Movie extends Event{
 	}
 	
 		
-	
-	
 	public ArrayList<Movie> getMovieList(){
 		
-		//dL.loadShows();
+		dL.loadShows();
 		for(int i=0;i<dL.SHOWLIST.length();i++) {
 			if(DataConstants.SHOWLIST_TYPE.equalsIgnoreCase("movie")) {
 				movies.add(new Movie(dL.SHOWLIST_NAME, dL.SHOWLIST_TIME1, dL.SHOWLIST_TIME2, dL.SHOWLIST_DESCRIPTION, dL.SHOWLIST_RATINGS));
