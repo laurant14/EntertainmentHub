@@ -32,7 +32,7 @@ public class DataWriter extends DataConstants {
 		accountDetails.put(ACCOUNTS_NAME, account.getName());
 		accountDetails.put(ACCOUNTS_USERNAME, account.getUsername());
 		accountDetails.put(ACCOUNTS_PASSWORD, account.getPassword());
-		accountDetails.put(ACCOUNTS_ACCTTYPE, account.getPassword());
+		accountDetails.put(ACCOUNTS_ACCTTYPE, account.getacctType());
 
 		return accountDetails;
 	}

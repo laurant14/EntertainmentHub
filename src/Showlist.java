@@ -22,7 +22,7 @@ public class Showlist {
 
 	public void addShow(ShowType type, String name, String time1, String time2,
 			String description,String ratings ) {
-		ShowList.add(new Show(type, name, time1, time2, description, ratings));
+		ShowList.add(new Show(type,name,time1,time2,description, ratings));
 		DataWriter.saveShows();
 	}
 }

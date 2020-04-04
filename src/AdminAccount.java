@@ -9,7 +9,8 @@ public class AdminAccount extends Account{
 	AccountType accountType;
 
   public Show addShow(Show show) {
-    return null;
+    show = new Show(ShowType type, String name, String time1, String time2, String description,String ratings);
+    Show.add(show);
   }
   
   public void removeShow(Show show) {

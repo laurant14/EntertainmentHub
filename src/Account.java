@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Account {
 	protected String username;
-	protected String password;
+	protected static String password;
 	protected String name;
 	protected String cardType;
 	protected int cardNum;
@@ -36,15 +36,23 @@ public class Account {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public AccountType getacctType() {
+		return this.acctType;
+	}
+	public void setacctType(AccountType acctType) {
 		this.acctType=acctType;
 	}
+	
 	
 
 	public Account(String name, String username, String password, AccountType acctType) {
 		this.name = name;
 		this.username = username;
 		this.password = password;
+		this.acctType = acctType;
 		}
+
 
 	public void addAccount(String name, String username, String password, AccountType acctType) {
 		Account account = new Account(name, username, password, acctType);	

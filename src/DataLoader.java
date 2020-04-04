@@ -11,8 +11,7 @@ public class DataLoader extends DataConstants{
 
 		try {
 			FileReader reader = new FileReader(ACCOUNTS_FILE_NAME);
-			//¿do we need this?
-			//JSONParser parser = new JSONParser();
+			JSONParser parser = new JSONParser();
 			JSONArray accountsJSON = (JSONArray)new JSONParser().parse(reader);
 
 			for(int i=0; i < accountsJSON.size(); i++) {
@@ -22,7 +21,7 @@ public class DataLoader extends DataConstants{
 				String username = (String)accountJSON.get(ACCOUNTS_USERNAME);
 				String password = (String)accountJSON.get(ACCOUNTS_PASSWORD);
 				AccountType acctType = (AccountType)accountJSON.get(ACCOUNTS_ACCTTYPE);	
-				//add to list
+				
 				accounts.add(new Account(name, username, password, acctType));
 			}
 			return accounts;
@@ -40,22 +39,21 @@ public class DataLoader extends DataConstants{
 
 		try {
 			FileReader reader = new FileReader(SHOWSLIST_FILE_NAME);
-			//JSONParser parser = new JSONParser();
+			JSONParser parser = new JSONParser();
 			JSONArray showslistJSON = (JSONArray)new JSONParser().parse(reader);
 
 			for(int i=0; i <showslistJSON.size(); i++) {
-
 				//for shows
 				JSONObject showsJSON = (JSONObject)showslistJSON.get(i);
-				ShowType showType = (ShowType)showsJSON.get(SHOWLIST_TYPE);
-				String showName = (String)showsJSON.get(SHOWLIST_NAME);
+				ShowType type = (ShowType)showsJSON.get(SHOWLIST_TYPE);
+				String name = (String)showsJSON.get(SHOWLIST_NAME);
 				String time1 = (String)showsJSON.get(SHOWLIST_TIME1);
 				String time2 = (String)showsJSON.get(SHOWLIST_TIME2);
 				String description = (String)showsJSON.get(SHOWLIST_DESCRIPTION);
 				String rating = (String)showsJSON.get(SHOWLIST_RATINGS);
 
 				//needs to be checked
-				showslist.add(new Show(showType,showName,time1,time2,description, rating));
+				showslist.add(new Show(type,name,time1,time2,description, rating));
 
 			}
 			return showslist;
