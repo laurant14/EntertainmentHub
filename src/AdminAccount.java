@@ -3,8 +3,8 @@ public class AdminAccount extends Account{
 	
 	
 
-  public AdminAccount(String name, String username, String password) {
-		super(name, username, password);
+  public AdminAccount(String name, String username, String password, AccountType acctType) {
+		super(name, username, password, acctType);
 		// TODO Auto-generated constructor stub
 	}
 

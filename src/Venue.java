@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Venue  {
 	
@@ -54,6 +55,15 @@ public class Venue  {
 		this.location=location;
 	}
 	
+	public ArrayList<Show> getShowing(String movieName) {
+		ArrayList<Show> shows=new ArrayList<Show>();
+		for(int i=0;i<theaters.length;i++){
+			shows.addAll(theaters[i].getShows(movieName));
+		}
+		return shows;
+
+	}
+	
 	
 	
 	public String printVenue() {
@@ -64,7 +74,7 @@ public class Venue  {
 		
 	}
 	
-	public Ticket getTicket() {
+	public Tickets getTicket() {
 		//TODO
 	}
 

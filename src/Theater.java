@@ -3,6 +3,12 @@ import java.util.ArrayList;
 
 public class Theater extends Show{
 	
+	public Theater(String username, int stars, String comment) {
+		super(username, stars, comment);
+		// TODO Auto-generated constructor stub
+	}
+
+
 	ArrayList<Show> showList=new ArrayList<Show>();
 	
 	
@@ -13,6 +19,18 @@ public class Theater extends Show{
 		return getShows();
 	}
 	
+	public ArrayList<Show> getShows(String movieName) {
+		ArrayList<Show> shows=new ArrayList<Show>();
+		 {
+			for(int i=0;i<showList.size();i++) {
+				if(showList.get(i).getEvent().getName().equals(movieName)) {
+					shows.add(showList.get(i));
+			}
+		}
+		return shows;
+	}
+	
 	
 
+}
 }

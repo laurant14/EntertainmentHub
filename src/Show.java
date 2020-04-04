@@ -4,7 +4,7 @@ public class Show extends Reviews {
 	Venue venue;
 	private String showTime;
 	private int seats[];
-	
+	private Event event;
 	public Show(String username, int stars, String comment) {
 		super(username, stars, comment);
 	}
@@ -31,6 +31,10 @@ public class Show extends Reviews {
 		}
 		return count;
 		
+	}
+	
+	public Event getEvent() {
+		return this.event;
 	}
 	
 	

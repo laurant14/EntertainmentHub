@@ -1,23 +1,16 @@
 
-public class RegularAccount extends Account{//either change to extends or make Account it an interface
-<<<<<<< HEAD
-	public RegularAccount(String name, String username, String password) {
-		super(name, username, password);
-		// TODO Auto-generated constructor stub
-	}
-=======
-	
->>>>>>> branch 'master' of https://github.com/laurant14/EntertainmentHub.git
+public class RegularAccount extends Account{
+
+
 	Account account;
 	AccountType accountType;
-<<<<<<< HEAD
-=======
+
 	
 	public RegularAccount(String name, String username, String password, AccountType acctType) {
 		super(name, username, password, acctType);
 		// TODO Auto-generated constructor stub
 	}
->>>>>>> branch 'master' of https://github.com/laurant14/EntertainmentHub.git
+
 	public void createDiscount() {
 		switch(accountType) {
 		case Student:
